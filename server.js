@@ -9,10 +9,12 @@ app.get("/", (req, res) => {
   res.send("Api is running!");
 });
 
+// Define routes
+app.use('/api/users',require('./Api/User'));
 const startServer = async () => {
   try {
     db.sequelize.authenticate().then(() => {
-      // db.sequelize.sync({force:true}).then(() => {
+      // db.sequelize.sync().then(() => {
          // db.sequelize.sync({alter:true}).then(() => {
       app.listen(process.env.PORT || port, () => {
         console.log(`Server listening at http://localhost:${port}`);

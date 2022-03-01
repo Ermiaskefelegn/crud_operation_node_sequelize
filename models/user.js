@@ -23,15 +23,66 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false,
     },
     city: {
-      type: dataTypes.INTEGER,
+      type: dataTypes.STRING,
       allowNull: false,
     },
     subcity: {
-      type: dataTypes.INTEGER,
+      type: dataTypes.STRING,
       allowNull: false,
     },
     
   });
+  // RealEstateBranch.associate = (models) => {
+  //   RealEstateBranch.belongsTo(models.RealEstate, {
+  //     foreignKey: {
+  //       name: "realestateId",
+  //       allowNull: false,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.House, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: false,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.RealEstateBranchImage, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: false,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.OutDoorFeature, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: true,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.InDoorFeature, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: true,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.Advantage, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: true,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  //   RealEstateBranch.hasMany(models.House, {
+  //     foreignKey: {
+  //       name: "realestatebranchId",
+  //       allowNull: true,
+  //     },
+  //     onDelete: "cascade",
+  //   });
+  // };
 
   return User;
 };
